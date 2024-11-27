@@ -10,7 +10,12 @@ export const metadata: Metadata = {
 };
 
 function TopNav() {
-  return <nav className="flex px-8 py-3 text-xl font-semibold">Navigasi</nav>;
+  return (
+    <nav className="flex justify-between px-8 py-3 text-xl font-semibold">
+      <div>Gallery</div>
+      <div>Sign In</div>
+    </nav>
+  );
 }
 
 export default function RootLayout({

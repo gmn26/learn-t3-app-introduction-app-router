@@ -13,47 +13,18 @@ export default function HomePage() {
   }));
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-      <div className="flex justify-between">
-        <div className="flex flex-wrap justify-center gap-4">
-          {mockImages.map((image) => (
-            <div key={image.id} className="w-1/2 p-4">
-              <Image
-                src={image.url}
-                alt="image"
-                width={1000}
-                height={1000}
-                className="w-48"
-              />
-            </div>
-          ))}
-        </div>
-        <div className="flex flex-wrap justify-center gap-4">
-          {mockImages.map((image) => (
-            <div key={image.id} className="w-1/2 p-4">
-              <Image
-                src={image.url}
-                alt="image"
-                width={1000}
-                height={1000}
-                className="w-48"
-              />
-            </div>
-          ))}
-        </div>
-        <div className="flex flex-wrap justify-center gap-4">
-          {mockImages.map((image) => (
-            <div key={image.id} className="w-1/2 p-4">
-              <Image
-                src={image.url}
-                alt="image"
-                width={1000}
-                height={1000}
-                className="w-48"
-              />
-            </div>
-          ))}
-        </div>
+    <main className="min-h-screen bg-gradient-to-b from-[#2e026d] to-[#15162c] p-4 text-white">
+      <div className="grid grid-cols-6 *:self-stretch">
+        {mockImages.map((image) => (
+          <Image
+            key={image.id}
+            src={image.url}
+            alt="image"
+            width={1000}
+            height={1000}
+            className="w-48"
+          />
+        ))}
       </div>
     </main>
   );
